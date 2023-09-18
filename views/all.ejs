@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktails - All</title>
+    <script src="https://kit.fontawesome.com/4637d6af85.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+
+    <%- include("./partials/navBar.ejs") %>
+
+    <form method="POST" action="/drink" class="allCardContainer">
+        <% for(var j=0; j<cocktails.length; j++) { %>
+            <% if(locals.cocktails[j]) { %>
+                <% for(var i=0; i<cocktails[j].length; i++) { %>
+                    <% if(locals.cocktails[j][i].strDrink) { %>
+                        <div class="allCard">
+                            <button type="submit" class="allCardSubmit" name="cocktailID" value=<%= cocktails[j][i].idDrink %>>
+                                <img src=<%= `${cocktails[j][i].strDrinkThumb}/preview` %> alt="" class="allCardsImage">
+                            </button>
+                            <button type="submit" class="allCardSubmit" name="cocktailID" value=<%= cocktails[j][i].idDrink %>>
+                                <h2 class="cocktailName"> <%= cocktails[j][i].strDrink %> </h2>
+                            </button>
+
+                        </div>
+                    <% } %>
+                <% } %>
+            <% } %>
+        <% } %>
+
+    </form>
+
+    
+</body>
+
+    <%- include("./partials/footer.ejs") %>
+
+
+</html>
