@@ -1,0 +1,52 @@
+* {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+body {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.card {
+    background-color: #B9B4C7;
+    border-radius: 15px;
+    width: 450px;
+    height: 800px;
+}
+
+.image {
+    margin: 0%;
+    width: 100%;
+    height: 40%;
+    border-radius: 15px 15px 0 0;
+}
+
+.cocktailName {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+hr {
+    border: 1px solid black;
+    margin: 0 10% 1.5rem 10%;
+    width: 80%;
+}
+
+.ingredientsContainer{
+    height: 400px;
+    overflow: auto;
+}
+
+.ingredient {
+    text-align: center;
+}

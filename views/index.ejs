@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktails</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+
+    <div class="card">
+        <img src=<%= `${cocktail.strDrinkThumb}/preview` %> alt="" class="image">
+        <h2 class="cocktailName"> <%= cocktail.strDrink %> </h2>
+        <hr>
+        <div class="ingredientsContainer">
+            <% for(var i=0; i<15; i++) { %>
+                <% if(locals.ingredients[i] && locals.measures[i]) { %>
+                    <p class="ingredient"> <%= ` ${measures[i]} - ${ingredients[i]} ` %>  </p>
+                <% } %>
+            <% } %>
+
+        </div>
+    </div>
+    
+</body>
+</html>
