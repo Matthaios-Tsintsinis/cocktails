@@ -7,8 +7,10 @@
     <script src="https://kit.fontawesome.com/4637d6af85.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
-<body>
 
+
+<body>
+    
     <%- include("./partials/navBar.ejs") %>
 
     <div class="cardContainer">
@@ -19,6 +21,7 @@
             <div class="ingredientsContainer">
                 <% for(var i=0; i<15; i++) { %>
                     <% if(locals.ingredients[i]) { %>
+                        <% if(!locals.measures[i]) { measures[i] = "Up to you"} %>
                         <p class="ingredient"> <%= ` ${measures[i]} - ${ingredients[i]} ` %>  </p>
                     <% } %>
                 <% } %>

@@ -9,13 +9,21 @@ p {
     margin-bottom: 1rem;
 }
 
+.navbarContainer {
+    width: 100%;
+    background-color: aliceblue;
+    position: fixed;
+    text-align: center;
+    top: 0;
+}
+
 .navbar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     gap: 2rem;
     height: 3rem;
-    margin: 0 2rem 2rem 0;
+    margin: 0 0 2rem 0;
 }
 
 .navItem {
@@ -41,6 +49,7 @@ p {
 
 
 body {
+    margin: 0;
     background-color: aliceblue;
 }
 
@@ -49,6 +58,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    top: 3rem;
 }
 
 .card {
@@ -78,7 +89,7 @@ hr {
 }
 
 .ingredientsContainer{
-    height: 400px;
+    height: 360px;
     overflow: auto;
 }
 
@@ -90,7 +101,7 @@ hr {
 
 
 .allCardContainer {
-    margin: 0 10% 0 10%;
+    margin: 4rem 10% 0 10%;
     width: 80%;
     display: grid;
     gap: 2rem;
@@ -123,4 +134,27 @@ hr {
 
 footer {
     text-align: center;
+}
+
+
+
+@media (max-width: 1250px){
+    .allCardContainer {
+        grid-auto-rows: 300px;
+        grid-template-columns: 31% 31% 31%;
+    }
+}
+
+@media (max-width: 992px){
+    .allCardContainer {
+        grid-auto-rows: 300px;
+        grid-template-columns: 47% 47%;
+    }
+}
+
+@media (max-width: 620px){
+    .allCardContainer {
+        grid-auto-rows: 300px;
+        grid-template-columns: 100%;
+    }
 }
