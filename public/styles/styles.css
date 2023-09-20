@@ -10,11 +10,16 @@ p {
 }
 
 .navbarContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    height: 3rem;
     background-color: aliceblue;
     position: fixed;
     text-align: center;
     top: 0;
+    z-index: 1;
 }
 
 .navbar {
@@ -22,8 +27,7 @@ p {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    height: 3rem;
-    margin: 0 0 2rem 0;
+    height: 2rem;
 }
 
 .navItem {
@@ -49,21 +53,23 @@ p {
 
 
 body {
+    height: 100%;
     margin: 0;
     background-color: aliceblue;
+    overflow: auto;
 }
 
 .cardContainer {
-    height: 90vh;
+    height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 3rem;
+    top: 4rem;
 }
 
 .card {
-    background-color: #B9B4C7;
+    background-color: #c5e0e580;
     border-radius: 15px;
     width: 450px;
     height: 800px;
@@ -88,16 +94,42 @@ hr {
     width: 80%;
 }
 
-.ingredientsContainer{
-    height: 360px;
-    overflow: auto;
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.ingredient {
+.gridHeaders{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 2rem;
+    grid-auto-rows: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.ingredientsContainer{
+    width: 80%;
+    height: 300px;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 2rem;
+    grid-auto-rows: 2rem;
     text-align: center;
 }
 
 
+.measure, .measureHeader{
+    text-align: center;
+}
+
+.ingredient, .ingredientHeader{
+    text-align: center;
+}
 
 
 .allCardContainer {
@@ -131,8 +163,10 @@ hr {
 
 
 
-
 footer {
+    height: 2rem;
+    position: relative;
+    top: 6rem;
     text-align: center;
 }
 

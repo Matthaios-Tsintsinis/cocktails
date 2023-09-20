@@ -18,14 +18,21 @@
             <img src=<%= `${cocktail.strDrinkThumb}/preview` %> alt="" class="image">
             <h2 class="cocktailName"> <%= cocktail.strDrink %> </h2>
             <hr>
-            <div class="ingredientsContainer">
-                <% for(var i=0; i<15; i++) { %>
-                    <% if(locals.ingredients[i]) { %>
-                        <% if(!locals.measures[i]) { measures[i] = "Up to you"} %>
-                        <p class="ingredient"> <%= ` ${measures[i]} - ${ingredients[i]} ` %>  </p>
+            <div class="container">
+                <div class="gridHeaders">
+                    <h3 class="measureHeader">Measure</h3>
+                    <h3 class="ingredientHeader">Ingredient</h3>
+                </div>
+                <div class="ingredientsContainer">
+                    <% for(var i=0; i<15; i++) { %>
+                        <% if(locals.ingredients[i]) { %>
+                            <% if(!locals.measures[i]) { measures[i] = "Up to you"} %>
+                            <p class="measure"> <%= ` ${measures[i]} ` %> </p>
+                            <p class="ingredient"> <%= ` ${ingredients[i]} ` %> </p>
+                        <% } %>
                     <% } %>
-                <% } %>
-    
+        
+                </div>
             </div>
         </div>
 
